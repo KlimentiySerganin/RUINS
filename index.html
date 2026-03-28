@@ -1,38 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RUINS Survival Game</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Ruins Website</title>
+    <style>
+        /* Общий стиль: чёрная тема с красными акцентами */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000000; /* Чёрный фон */
+            color: #ffffff; /* Белый текст */
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Hotbar (навигация сверху) */
+        .hotbar {
+            background-color: #000000; /* Полностью чёрный фон */
+            padding: 10px 20px; /* Padding слева/справа для места лого */
+            display: flex; /* Flexbox для выравнивания */
+            justify-content: space-between; /* Лого слева, кнопки справа */
+            align-items: center; /* Центрирование по вертикали */
+            border-bottom: 2px solid #ff0000; /* Красная линия внизу */
+        }
+
+        .hotbar .logo {
+            /* Лого слева */
+            height: 50px; /* Задайте высоту, как нужно */
+        }
+
+        .hotbar .buttons {
+            display: flex; /* Кнопки в ряд */
+            gap: 10px; /* Расстояние между кнопками */
+        }
+
+        .hotbar button {
+            background-color: transparent; /* Полностью прозрачная кнопка */
+            color: #ffffff;
+            border: none; /* Без контура, как ранее */
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Скрываем подчёркивание с ссылками */
+        }
+
+        .hotbar button:hover {
+            background-color: #ff0000; /* Красный при наведении */
+            color: #000000;
+        }
+
+        /* Заголовок About RUINS */
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            text-transform: uppercase;
+            margin: 0;
+            border-bottom: 3px solid #ff0000; /* Красная подчёркивающая линия */
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        /* Область для текста под заголовком */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            border-left: 2px solid #ff0000; /* Красная линия слева для стиля */
+            border-right: 2px solid #ff0000; /* Красная линия справа */
+            background-color: #000000; /* Явно чёрный фон */
+        }
+
+        .content p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            color: #ffffff; /* Белый текст */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>RUINS</h1>
-        <h2>Survival Game</h2>
-    </header>
-    <main>
-        <section class="hero">
-            <p>Survive the apocalypse in a world of ruins. Fight, build, and explore!</p>
-            <button>Play Now</button>
-        </section>
-        <section class="features">
-            <div class="feature">
-                <h3>Combat</h3>
-                <p>Engage in epic battles against mutants and scavengers.</p>
-            </div>
-            <div class="feature">
-                <h3>Building</h3>
-                <p>Construct shelters and fortifications to outlast the night.</p>
-            </div>
-            <div class="feature">
-                <h3>Exploration</h3>
-                <p>Discover hidden treasures in abandoned ruins.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 RUINS Survival Game. By Klimentiy Serganin.</p>
-    </footer>
+    <!-- Hotbar сверху -->
+    <nav class="hotbar">
+        <!-- Лого слева -->
+        <img src="logo.png" alt="Logo" class="logo">
+        <!-- Кнопки справа -->
+        <div class="buttons">
+            <a href="https://discord.gg/GK5xkAfdqZ" target="_blank" style="text-decoration: none;"><button>Play</button></a>
+            <a href="https://discord.gg/GK5xkAfdqZ" target="_blank" style="text-decoration: none;"><button>Discord</button></a>
+            <button onclick="alert('Dont work today')">Report</button>
+            <button onclick="alert('Dont work today')">Wiki</button>
+        </div>
+    </nav>
+
+    <!-- Заголовок -->
+    <div class="header">
+        <h1>About RUINS</h1>
+    </div>
+
+    <!-- Текст под заголовком -->
+    <div class="content">
+        <p>RUINS - Multiplayer game based on RUST. In this game, it's every man for himself. Don't trust anyone. Survive. Fight. Gather resources. Explore.</p>
+        <p>Game lore: You are the last survivors of a disaster at a CY-BA reactor connected to a teleport. As a result, you were all teleported to a large island where a civilization once existed. Now, you are forced to fight against similar people.</p>
+    </div>
 </body>
 </html>
